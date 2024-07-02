@@ -5,7 +5,7 @@ pipeline {
         jdk "OracleJDK17"
         }
     environment {
-        SNAP_REPO = 'vprofile-snapshots'
+        SNAP_REPO = 'vprofile-snapshot'
         NEXUS_USER = 'admin'
         NEXUS_PASS = 'Powerjeff1@'
         RELEASE_REPO = 'vprofile-release'
