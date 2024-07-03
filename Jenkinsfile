@@ -3,7 +3,7 @@ pipeline {
     tools {
         maven "MAVEN3"
         jdk "OracleJDK17"
-        }
+    }
     environment {
         SNAP_REPO = 'vprofile-snapshot'
         NEXUS_USER = 'admin'
@@ -26,21 +26,17 @@ pipeline {
                     echo 'Now Archiving the Artifacts'
                     archiveArtifacts artifacts: '**/*.war'
                 }
-                
             }
+        }
         stage('Test') {
             steps {
                 sh 'mvn -s settings.xml test'
             }
-            
-        
-            }
+        }
         stage('Checkstyle Analysis') {
             steps {
-                sh 'mvn -s seetings.xml checkstyle:checkstyle'
-                
+                sh 'mvn -s settings.xml checkstyle:checkstyle'
             }
         }
-        
     }
 }
