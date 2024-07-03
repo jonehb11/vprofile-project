@@ -15,7 +15,7 @@ pipeline {
         NEXUS_GRP_REPO = 'vpro-maven-group'
         NEXUS_LOGIN = 'ab847e88-90d3-4f99-b067-d13fa7161a75'
         SONARSERVER = 'sonarserver' // Define SONARSERVER if not defined elsewhere
-        SONARSCANNER = tool 'sonarscanner' // Use tool step to define SONARSCANNER
+        SONARSCANNER = 'sonarscanner' // Use tool step to define SONARSCANNER
     }
 
     stages {
